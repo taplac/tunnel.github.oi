@@ -1,84 +1,79 @@
----
-layout: home
----
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Bitnami: Open Source. Simplified</title>
+  <link href="bitnami.css" media="all" rel="Stylesheet" type="text/css" /> 
+  <link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="contain-to-grid">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/dashboard/index.html">Apache Friends</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
 
-<main class="bd-masthead" id="content" role="main">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-6 mx-auto col-md-6 order-md-2">
-        <img class="img-fluid mb-3 mb-md-0" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-stack.png" alt="" width="1024" height="860">
-      </div>
-      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-        <h1 class="mb-3 bd-text-purple-bright">Bootstrap</h1>
-        <p class="lead">
-          Build responsive, mobile-first projects on the web with the world's most popular front-end component library.
-        </p>
-        <p class="lead mb-4">
-          Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
-        </p>
-        <div class="d-flex flex-column flex-md-row lead mb-3">
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>
-          <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Download</a>
-        </div>
-        <p class="text-muted mb-0">
-          Currently v{{ site.current_version }}
-        </p>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active"><a href="/applications.html">Applications</a></li>
+          <li class=""><a href="/dashboard/faq.html">FAQs</a></li>
+          <li class=""><a href="/dashboard/howto.html">HOW-TO Guides</a></li>
+          <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+          <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <div id="wrapper">
+    <div class="hero">
+       <div class="row">
+         <div class="large-12 columns">
+            <p>Apache Friends and Bitnami are cooperating to make dozens of open source applications available on XAMPP, for free. Bitnami-packaged applications include Wordpress, Drupal, Joomla! and dozens of others and can be deployed with one-click installers. Visit the <a href="https://bitnami.com/xampp?utm_source=bitnami&utm_medium=installer&utm_campaign=XAMPP%2BModule" target="_blank">Bitnami XAMPP page</a> for details on the currently available apps.</p><br/>
+            <p>Check out our <a href="https://www.apachefriends.org/bitnami_for_xampp.html" target="_blank" >Bitnami for XAMPP Start Guide</a> for more information about the applications installed.</p>
+         </div>
+       </div>
+    </div>
+    <div id="lowerContainer" class="row">
+      <div id="content" class="large-12 columns">
+          <!-- @@BITNAMI_MODULE_PLACEHOLDER@@ -->
       </div>
     </div>
-    {% include ads.html %}
   </div>
-</main>
+  <footer>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="large-8 columns">
+            <ul class="social">
+              <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
+              <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+              <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
+            </ul>
 
-<div class="masthead-followup row m-0 border border-white">
-  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/import.svg width="32" height="32" class="text-primary mb-2" %}
-    <h3>Installation</h3>
-    <p>Include Bootstrap's source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don't include documentation, but do include our build system and readme.</p>
-
-{% highlight sh %}
-npm install bootstrap
-{% endhighlight %}
-
-{% highlight sh %}
-gem install bootstrap -v {{ site.current_ruby_version }}
-{% endhighlight %}
-
-    <hr class="half-rule">
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/">Read installation docs</a>
-  </div>
-
-  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/download.svg width="32" height="32" class="text-primary mb-2" %}
-    <h3>BootstrapCDN</h3>
-    <p>When you only need to include Bootstrap's compiled CSS or JS, you can use <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.</p>
-
-<h5>CSS only</h5>
-{% highlight html %}
-<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
-{% endhighlight %}
-
-<h5>JS, Popper.js, and jQuery</h5>
-{% highlight html %}
-<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-<script src="{{ site.cdn.popper }}" integrity="{{ site.cdn.popper_hash }}" crossorigin="anonymous"></script>
-<script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
-{% endhighlight %}
-    <hr class="half-rule">
-    <a class="btn btn-outline-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/">Explore the docs</a>
-  </div>
-
-  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
-    <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-    {% include icons/lightning.svg width="32" height="32" class="text-primary mb-2" %}
-    <h3>Official Themes</h3>
-    <p>
-      Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
-    </p>
-    <img class="img-fluid mt-3 mx-auto" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/bootstrap-themes.png" alt="Bootstrap Themes" width="1024" height="388">
-    <hr class="half-rule">
-    <a href="{{ site.themes }}" class="btn btn-outline-primary">Browse themes</a>
-  </div>
-</div>
-
+            <ul class="inline-list">
+              <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
+              <li><a href="https://www.apachefriends.org/privacy_policy.html">Privacy Policy</a></li>
+              <li>
+                <a target="_blank" href="http://www.fastly.com/">                    CDN provided by
+                  <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="large-4 columns">
+            <p class="text-right">Copyright (c) 2015, Apache Friends</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
